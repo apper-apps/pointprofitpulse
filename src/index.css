@@ -1,0 +1,85 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .input-number {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-accent-100 bg-accent-50/30 text-gray-900 placeholder-gray-500 focus:border-accent-500 focus:ring-2 focus:ring-accent-200 focus:bg-white transition-all duration-200 font-medium;
+  }
+  
+  .profit-positive {
+    @apply text-success-600 bg-success-50;
+  }
+  
+  .profit-negative {
+    @apply text-danger-600 bg-danger-50;
+  }
+  
+  .metric-card {
+    @apply bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .bundle-card {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl p-5 border border-primary-200 shadow-sm;
+  }
+}
+
+/* Toast Overrides */
+.Toastify__toast-container {
+  @apply text-sm;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg;
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+.Toastify__toast--success {
+  @apply bg-success-500 text-white;
+}
+
+.Toastify__toast--error {
+  @apply bg-danger-500 text-white;
+}
+
+.Toastify__toast--warning {
+  @apply bg-warning-500 text-white;
+}
+
+.Toastify__progress-bar {
+  @apply bg-white/30;
+}
+
+/* Number Animation */
+.number-animate {
+  transition: all 0.2s ease-out;
+}
+
+.number-animate:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .metric-card {
+    @apply p-4;
+  }
+  
+  .bundle-card {
+    @apply p-4;
+  }
+}
